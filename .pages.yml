@@ -1,0 +1,60 @@
+media:
+  input: media
+  output: /media
+  rename: safe
+  categories: [image]
+
+content:
+  - name: products
+    label: محصولات فرش صدرا
+    type: collection
+    path: products
+    filename: "{primary}.json"
+    format: json
+    fields:
+      - name: title
+        label: نام فرش
+        type: string
+        required: true
+
+      - name: image
+        label: عکس فرش
+        type: image
+
+      - name: dimensions
+        label: ابعاد
+        type: string
+
+      - name: design
+        label: طرح فرش
+        type: string
+
+      - name: raj
+        label: رج فرش
+        type: number
+
+      - name: material
+        label: جنس و مواد
+        type: string
+
+      - name: condition
+        label: وضعیت فرش
+        type: select
+        options:
+          values:
+            - در حد نو
+            - نو
+            - کارکرده
+
+      - name: price
+        label: قیمت به تومان
+        type: number
+
+      - name: status
+        label: وضعیت موجودی
+        type: select
+        options:
+          values:
+            - موجود
+            - رزرو شده
+            - فروخته شده
