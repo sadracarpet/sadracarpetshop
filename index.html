@@ -2,185 +2,106 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="فرش صدرا، عرضه‌کننده فرش‌های اصیل دستباف تبریز">
-<title>فرش صدرا | دنیای فرش‌های اصیل دستباف</title>
+<title>فرش صدرا | Sadra Carpet</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root{
+  --wine:#541b27;
+  --dark:#281117;
+  --gold:#c9a45c;
+  --cream:#faf7f0;
+  --text:#35251f;
 }
-
-body {
-    font-family: Tahoma, Arial, sans-serif;
-    background: #faf7f0;
-    color: #35251f;
-    line-height: 1.9;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--cream);color:var(--text);
+  font-family:Tahoma,Arial,sans-serif;line-height:1.9
 }
-
-header {
-    background: #541b27;
-    color: #fff;
-    padding: 22px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    border-bottom: 3px solid #c9a45c;
+header{
+  background:var(--wine);color:white;padding:18px 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:14px;border-bottom:3px solid var(--gold)
 }
-
-.logo {
-    font-size: 27px;
-    color: #e8cb8c;
-    font-weight: bold;
+.logo{font-size:27px;font-weight:bold;color:#ead19a}
+nav{display:flex;flex-wrap:wrap;gap:15px}
+nav a{color:white;text-decoration:none;font-size:14px}
+.lang{
+  background:var(--gold);border:0;border-radius:7px;
+  padding:9px 15px;font-weight:bold;cursor:pointer;color:#321b20
 }
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 8px;
-    font-size: 14px;
+.hero{
+  text-align:center;color:white;padding:85px 20px;
+  background:radial-gradient(circle at top,#75404a,var(--dark) 75%)
 }
-
-.hero {
-    background: linear-gradient(135deg, #541b27, #27131a);
-    color: white;
-    text-align: center;
-    padding: 85px 20px;
+.hero h1{font-size:42px;color:#ead19a;margin:0 0 12px}
+.hero p{font-size:17px;margin:8px}
+.button{
+  display:inline-block;background:var(--gold);color:#321b20;
+  padding:11px 25px;border-radius:7px;text-decoration:none;
+  font-weight:bold;margin-top:18px
 }
-
-.hero h1 {
-    color: #e8cb8c;
-    font-size: 36px;
-    margin-bottom: 15px;
+section{padding:55px 6%}
+.section-title{
+  text-align:center;color:var(--wine);
+  font-size:27px;margin:0 0 28px
 }
-
-.hero p {
-    font-size: 17px;
-    margin-bottom: 25px;
+.intro{max-width:780px;text-align:center;margin:auto}
+.categories,.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px
 }
-
-.button {
-    display: inline-block;
-    background: #c9a45c;
-    color: #321b20;
-    padding: 12px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
+.category{
+  background:white;border:1px solid #dfc99e;padding:20px;
+  text-align:center;border-radius:10px;color:var(--wine);font-weight:bold
 }
-
-section {
-    padding: 55px 6%;
+.product{
+  background:white;border:1px solid #eadfc9;border-radius:12px;
+  overflow:hidden;text-align:center;padding-bottom:18px;
+  box-shadow:0 5px 18px #0000000c
 }
-
-.section-title {
-    text-align: center;
-    color: #541b27;
-    font-size: 27px;
-    margin-bottom: 30px;
+.product img{
+  width:100%;height:250px;object-fit:contain;
+  background:#f2eadc;display:block
 }
-
-.intro {
-    text-align: center;
-    max-width: 750px;
-    margin: auto;
+.no-image{
+  height:250px;display:grid;place-items:center;
+  background:#eee4d1;color:var(--wine)
 }
-
-.categories, .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-    gap: 18px;
+.product h3{color:var(--wine);margin:14px 10px 7px}
+.product p{font-size:13px;margin:5px 10px}
+.price{font-size:17px!important;font-weight:bold;color:var(--wine)}
+.status{font-weight:bold;color:#39744b}
+.sold{color:#a12d32}
+.product a{
+  display:inline-block;background:var(--wine);color:white;
+  padding:9px 20px;text-decoration:none;border-radius:6px;margin-top:12px
 }
-
-.category {
-    background: #fff;
-    border: 1px solid #dfc99e;
-    padding: 22px 10px;
-    text-align: center;
-    border-radius: 8px;
-    color: #541b27;
-    font-weight: bold;
+#loading{text-align:center;padding:25px;color:var(--wine)}
+.contact{background:var(--wine);color:white;text-align:center}
+.contact .section-title{color:#ead19a}
+.contact-box{max-width:760px;margin:auto}
+.contact-links{
+  display:flex;justify-content:center;gap:12px;
+  flex-wrap:wrap;margin:20px
 }
-
-.product {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 14px #00000012;
-    text-align: center;
-    padding-bottom: 20px;
+.contact-links a{
+  display:inline-block;background:var(--gold);color:#321b20;
+  padding:10px 17px;border-radius:7px;text-decoration:none;font-weight:bold
 }
-
-.product-image {
-    height: 190px;
-    background: linear-gradient(135deg, #e8d9bd, #c5a778);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #541b27;
-    font-size: 17px;
-    font-weight: bold;
+.address{margin-top:25px;line-height:2.2}
+footer{
+  background:var(--dark);color:#e4d1ac;
+  text-align:center;padding:20px;font-size:13px
 }
-
-.product h3 {
-    color: #541b27;
-    margin: 15px 5px 5px;
-}
-
-.product p {
-    font-size: 13px;
-    padding: 0 10px;
-}
-
-.product a {
-    display: inline-block;
-    margin-top: 12px;
-    background: #541b27;
-    color: white;
-    padding: 8px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.contact {
-    background: #541b27;
-    color: white;
-    text-align: center;
-}
-
-.contact h2 {
-    color: #e8cb8c;
-    margin-bottom: 15px;
-}
-
-footer {
-    background: #26151a;
-    color: #d8c6a4;
-    text-align: center;
-    padding: 20px;
-    font-size: 13px;
-}
-
-@media(max-width:600px) {
-    header {
-        justify-content: center;
-        text-align: center;
-    }
-
-    nav {
-        margin-top: 12px;
-    }
-
-    .hero h1 {
-        font-size: 27px;
-    }
-
-    section {
-        padding: 40px 5%;
-    }
+@media(max-width:600px){
+  header{justify-content:center;text-align:center}
+  nav{justify-content:center}
+  .hero h1{font-size:31px}
+  section{padding:40px 5%}
 }
 </style>
 </head>
@@ -188,54 +109,313 @@ footer {
 <body>
 
 <header>
-    <div class="logo">فرش صدرا</div>
-    <nav>
-        <a href="#home">خانه</a>
-        <a href="#categories">دسته‌بندی</a>
-        <a href="#products">محصولات</a>
-        <a href="#contact">تماس</a>
-    </nav>
+  <div class="logo">فرش صدرا</div>
+
+  <nav>
+    <a href="#home" data-fa="خانه" data-en="Home">خانه</a>
+    <a href="#categories" data-fa="دسته‌بندی" data-en="Categories">دسته‌بندی</a>
+    <a href="#products" data-fa="محصولات" data-en="Products">محصولات</a>
+    <a href="#contact" data-fa="تماس با ما" data-en="Contact">تماس با ما</a>
+  </nav>
+
+  <button class="lang" id="languageButton">English</button>
 </header>
 
 <div class="hero" id="home">
-    <h1>فرش صدرا</h1>
-    <p>اصالت هنر تبریز، زیبایی ماندگار خانه شما</p>
-    <p>مجموعه‌ای از فرش‌های اصیل دستباف و نفیس</p>
-    <a class="button" href="#products">مشاهده فرش‌ها</a>
+  <h1 data-fa="فرش صدرا" data-en="Sadra Carpet">فرش صدرا</h1>
+  <p data-fa="اصالت هنر تبریز، زیبایی ماندگار خانه شما"
+     data-en="The heritage of Tabriz craftsmanship, timeless beauty for your home">
+     اصالت هنر تبریز، زیبایی ماندگار خانه شما
+  </p>
+  <p data-fa="مجموعه‌ای از فرش‌های اصیل دستباف و نفیس"
+     data-en="A collection of authentic and exquisite handmade Persian rugs">
+     مجموعه‌ای از فرش‌های اصیل دستباف و نفیس
+  </p>
+  <a class="button" href="#products"
+     data-fa="مشاهده فرش‌ها" data-en="Explore Our Rugs">مشاهده فرش‌ها</a>
 </div>
 
 <section>
-    <h2 class="section-title">به دنیای فرش صدرا خوش آمدید</h2>
-    <div class="intro">
-        <p>
-        در فرش صدرا، زیبایی و اصالت هنر دستباف را کنار هم آورده‌ایم.
-        هدف ما ارائه فرش‌هایی ارزشمند، باکیفیت و چشم‌نواز
-        برای خانه‌های ایرانی و مشتریان سراسر جهان است.
-        </p>
-    </div>
+  <h2 class="section-title"
+      data-fa="به دنیای فرش صدرا خوش آمدید"
+      data-en="Welcome to Sadra Carpet">
+      به دنیای فرش صدرا خوش آمدید
+  </h2>
+  <div class="intro">
+    <p data-fa="در فرش صدرا، زیبایی و اصالت هنر دستباف را کنار هم آورده‌ایم. هدف ما ارائه فرش‌هایی ارزشمند، باکیفیت و چشم‌نواز برای خانه‌های ایرانی و مشتریان سراسر جهان است."
+       data-en="At Sadra Carpet, we bring together the beauty and heritage of handmade Persian rugs. We offer valuable, high-quality rugs to customers in Iran and around the world.">
+       در فرش صدرا، زیبایی و اصالت هنر دستباف را کنار هم آورده‌ایم. هدف ما ارائه فرش‌هایی ارزشمند، باکیفیت و چشم‌نواز برای خانه‌های ایرانی و مشتریان سراسر جهان است.
+    </p>
+  </div>
 </section>
 
 <section id="categories">
-    <h2 class="section-title">دسته‌بندی فرش‌ها</h2>
+  <h2 class="section-title"
+      data-fa="دسته‌بندی فرش‌ها"
+      data-en="Rug Categories">دسته‌بندی فرش‌ها</h2>
 
-    <div class="categories">
-        <div class="category">فرش سالاری</div>
-        <div class="category">فرش نامی</div>
-        <div class="category">فرش خطیبی</div>
-        <div class="category">فرش علیا</div>
-        <div class="category">فرش گرد و بیضی</div>
-        <div class="category">فرش‌های ۶ متری</div>
-        <div class="category">فرش‌های ۹ متری</div>
-    </div>
+  <div class="categories">
+    <div class="category" data-fa="فرش سالاری" data-en="Salari Rugs">فرش سالاری</div>
+    <div class="category" data-fa="فرش نامی" data-en="Nami Rugs">فرش نامی</div>
+    <div class="category" data-fa="فرش خطیبی" data-en="Khatibi Rugs">فرش خطیبی</div>
+    <div class="category" data-fa="فرش علیا" data-en="Olya Rugs">فرش علیا</div>
+    <div class="category" data-fa="فرش گرد و بیضی" data-en="Round & Oval Rugs">فرش گرد و بیضی</div>
+    <div class="category" data-fa="فرش‌های دستباف" data-en="Handmade Rugs">فرش‌های دستباف</div>
+  </div>
 </section>
 
 <section id="products">
-    <h2 class="section-title">محصولات منتخب فرش صدرا</h2>
+  <h2 class="section-title"
+      data-fa="محصولات فرش صدرا"
+      data-en="Sadra Carpet Collection">محصولات فرش صدرا</h2>
 
-    <div class="products">
+  <div id="loading"
+       data-fa="در حال دریافت محصولات..."
+       data-en="Loading products...">در حال دریافت محصولات...</div>
 
-        <div class="product">
-            <div class="product-image">تصویر فرش واقعی</div>
-            <h3>فرش دستباف سالاری</h3>
-            <p>مشخصات و قیمت به‌زودی</p>
-            <a href="https://www.instagram.com/Khaffaf_sadra.carpet
+  <div class="products" id="productList"></div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="section-title"
+      data-fa="ارتباط با فرش صدرا"
+      data-en="Contact Sadra Carpet">ارتباط با فرش صدرا</h2>
+
+  <div class="contact-box">
+    <p data-fa="مدیریت فروش: یوسف خفاف پور کمیلی"
+       data-en="Sales Manager: Yousef Khafafpour Komili">
+       مدیریت فروش: یوسف خفاف پور کمیلی
+    </p>
+
+    <p dir="ltr">09144100637</p>
+
+    <div class="contact-links">
+      <a href="tel:+989144100637"
+         data-fa="تماس تلفنی" data-en="Call Us">تماس تلفنی</a>
+
+      <a href="https://wa.me/989144100637"
+         target="_blank" rel="noopener">WhatsApp</a>
+
+      <a href="https://t.me/+989144100637"
+         target="_blank" rel="noopener">Telegram</a>
+
+      <a href="https://www.instagram.com/Khaffaf_sadra.carpet/"
+         target="_blank" rel="noopener">Instagram</a>
+    </div>
+
+    <div class="address">
+      <strong data-fa="نشانی فروشگاه"
+              data-en="Store Address">نشانی فروشگاه</strong>
+
+      <p data-fa="تبریز، خیابان دارایی، بازار قیزبستی، جنب مظفریه، سرای میر اسماعیل، فرش صدرا"
+         data-en="Sadra Carpet, Mir Esmaeil Sara, next to Mozafarieh, Qizbasti Bazaar, Daraei Street, Tabriz, Iran">
+         تبریز، خیابان دارایی، بازار قیزبستی، جنب مظفریه، سرای میر اسماعیل، فرش صدرا
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © Sadra Carpet | فرش صدرا
+</footer>
+
+<script>
+const owner = "sadracarpet";
+const repo = "sadracarpetshop";
+const branch = "main";
+let currentLanguage = "fa";
+
+function imageUrl(value) {
+  if (!value) return "";
+  const path = String(value).trim();
+
+  if (/^https?:\/\//i.test(path)) return path;
+
+  return "https://raw.githubusercontent.com/" +
+    owner + "/" + repo + "/" + branch + "/" +
+    path.replace(/^\/+/, "");
+}
+
+function makeLine(label, value) {
+  if (value === undefined || value === null || value === "") return null;
+
+  const p = document.createElement("p");
+  p.textContent = label + value;
+  return p;
+}
+
+function renderProduct(product) {
+  const card = document.createElement("article");
+  card.className = "product";
+
+  const title = product.title || "فرش دستباف";
+
+  if (product.image) {
+    const img = document.createElement("img");
+    img.src = imageUrl(product.image);
+    img.alt = title;
+    img.loading = "lazy";
+
+    img.onerror = function () {
+      const placeholder = document.createElement("div");
+      placeholder.className = "no-image";
+      placeholder.textContent = "فرش صدرا";
+      img.replaceWith(placeholder);
+    };
+
+    card.appendChild(img);
+  } else {
+    const placeholder = document.createElement("div");
+    placeholder.className = "no-image";
+    placeholder.textContent = "فرش صدرا";
+    card.appendChild(placeholder);
+  }
+
+  const heading = document.createElement("h3");
+  heading.textContent = title;
+  card.appendChild(heading);
+
+  const fields = currentLanguage === "fa"
+    ? [
+        ["ابعاد: ", product.dimensions],
+        ["طرح: ", product.design],
+        ["رج: ", product.raj],
+        ["جنس: ", product.material],
+        ["وضعیت فرش: ", product.condition]
+      ]
+    : [
+        ["Dimensions: ", product.dimensions],
+        ["Design: ", product.design],
+        ["Raj: ", product.raj],
+        ["Material: ", product.material],
+        ["Condition: ", product.condition]
+      ];
+
+  fields.forEach(([label, value]) => {
+    const line = makeLine(label, value);
+    if (line) card.appendChild(line);
+  });
+
+  if (product.price !== undefined && product.price !== null && product.price !== "") {
+    const price = document.createElement("p");
+    price.className = "price";
+    price.textContent = Number(product.price).toLocaleString(
+      currentLanguage === "fa" ? "fa-IR" : "en-US"
+    ) + (currentLanguage === "fa" ? " تومان" : " Toman");
+    card.appendChild(price);
+  }
+
+  if (product.status) {
+    const status = document.createElement("p");
+    status.className = product.status === "فروخته شده" ? "status sold" : "status";
+
+    const statusTranslations = {
+      "موجود": "Available",
+      "رزرو شده": "Reserved",
+      "فروخته شده": "Sold"
+    };
+
+    status.textContent = currentLanguage === "fa"
+      ? product.status
+      : (statusTranslations[product.status] || product.status);
+
+    card.appendChild(status);
+  }
+
+  const button = document.createElement("a");
+  button.href = "https://wa.me/989144100637?text=" +
+    encodeURIComponent("سلام، درباره فرش " + title + " اطلاعات می‌خواستم.");
+  button.target = "_blank";
+  button.rel = "noopener";
+  button.textContent = currentLanguage === "fa"
+    ? "استعلام و خرید"
+    : "Ask About This Rug";
+
+  card.appendChild(button);
+
+  return card;
+}
+
+async function loadProducts() {
+  const list = document.getElementById("productList");
+  const loading = document.getElementById("loading");
+
+  list.innerHTML = "";
+  loading.style.display = "block";
+  loading.textContent = currentLanguage === "fa"
+    ? "در حال دریافت محصولات..."
+    : "Loading products...";
+
+  try {
+    const url = "https://api.github.com/repos/" +
+      owner + "/" + repo + "/contents/products?ref=" + branch;
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error("Products could not be loaded");
+    }
+
+    const files = await response.json();
+
+    const jsonFiles = files.filter(file =>
+      file.type === "file" && file.name.toLowerCase().endsWith(".json")
+    );
+
+    const products = await Promise.all(
+      jsonFiles.map(async file => {
+        const result = await fetch(file.download_url);
+        if (!result.ok) return null;
+        return await result.json();
+      })
+    );
+
+    const validProducts = products.filter(Boolean);
+
+    loading.style.display = "none";
+
+    if (validProducts.length === 0) {
+      loading.style.display = "block";
+      loading.textContent = currentLanguage === "fa"
+        ? "هنوز محصولی ثبت نشده است."
+        : "No products have been added yet.";
+      return;
+    }
+
+    validProducts.forEach(product => {
+      list.appendChild(renderProduct(product));
+    });
+
+  } catch (error) {
+    loading.style.display = "block";
+    loading.textContent = currentLanguage === "fa"
+      ? "دریافت محصولات ممکن نشد. لطفاً کمی بعد دوباره تلاش کنید."
+      : "Products could not be loaded. Please try again later.";
+  }
+}
+
+function setLanguage(language) {
+  currentLanguage = language;
+
+  document.documentElement.lang = language;
+  document.documentElement.dir = language === "fa" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-fa]").forEach(element => {
+    element.textContent = element.dataset[language];
+  });
+
+  document.getElementById("languageButton").textContent =
+    language === "fa" ? "English" : "فارسی";
+
+  loadProducts();
+}
+
+document.getElementById("languageButton").addEventListener("click", function () {
+  setLanguage(currentLanguage === "fa" ? "en" : "fa");
+});
+
+loadProducts();
+</script>
+
+</body>
+</html>
